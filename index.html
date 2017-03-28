@@ -17,81 +17,7 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<style>
-			body {
-			  font: 20px Montserrat, sans-serif;
-			  line-height: 1.8;
-			  color: #f5f6f7;
-		  	}
-		  	p {font-size: 16px;}
-		  	.margin {margin-bottom: 15px;}
-			.padding {padding: 20px;}
-		  	.bg-1 { 
-			  background-color: #53A2BE; /* Light Blue */
-			  color: #ffffff;
-		  	}
-		  	.bg-2 { 
-			  background-color: #053C5C; /* Dark Blue */
-			  color: #ffffff;
-		  	}
-		  	.bg-3 { 
-			  background-color: #ffffff; /* White */
-			  color: #555555;
-		  	}
-		  	.bg-4 { 
-			  background-color: #2f2f2f; /* Black Gray */
-			  color: #fff;
-		  	}
-		  	.container-fluid {
-			  padding-top: 10px;
-			  padding-bottom: 10px;
-		  	}
-		  	.navbar {
-			  padding-top: 15px;
-			  padding-bottom: 15px;
-			  border: 0;
-			  border-radius: 0;
-			  margin-bottom: 0;
-			  font-size: 12px;
-			  letter-spacing: 5px;
-		  	}
-		  	.navbar-nav  li a:hover {
-			  color: #53A2BE !important;
-		  	}
-			.navbar-header {
-				padding: 0px;
-				line-height: 1
-			}
-			.navbar-brand {
-				padding-top: 0;
-			}
-			.navbar-brand > img {
-				height: 45px;
-			}
-			.icon {
-				height: 45px;
-				width: 45px;
-				margin-left: 3px;
-				margin-top: 3px;
-			}
-			.social {
-				margin: auto;
-			}
-			@media(min-width:768px) {
-				.container-fluid {
-				  padding-top: 30px;
-				  padding-bottom: 70px;
-				}
-				.icon {
-					height: 95px;
-					width: 95px;
-					margin-left: 3px;
-					margin-top: 3px;
-				}
-				.margin {margin-bottom: 25px;}
-				.padding {padding: 50px;}
-			}
-	  </style>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -125,7 +51,7 @@
 		  	<div class="col-sm-8 padding">
 				<p class="h4"><span class="h2">Hi.</span></p>
 				<p class="h4 margin">I am a budding web developer looking to get my first entry level position.</p>
-				<p class="h4 margin">I am passionate about learning new web technologies, honing my skills and bringing ideas to life with  software development.</p>
+				<p class="h4 margin">I am passionate about learning new web development technologies, honing my skills and bringing ideas to life with  software development.</p>
 		  	</div>
 		  	<div class="col-sm-4">
 		  		<img src="media/profile-img.jpg" class="img-responsive img-circle margin" style="display:inline" alt="head-shot" width="300" height="300">
@@ -180,7 +106,7 @@
 		  	</div>
 		  </div>
 		  <!--Row 2-->
-		  <div class="row">
+		  <div class="row" id="row2">
 		  	<div class="col-sm-4 col-sm-offset-4">
 		  		<div class="thumbnail">
 		  			<img src="media/drawingapp-screenshot.png" alt="Drawing App" class="img-responsive">
@@ -197,7 +123,16 @@
 		  		</div>
 		  	</div>
 		  </div>
-		</div>
+		  <!--Hide/Show button-->
+		  <div>
+		  	<button type="button" class="btn btn-lg" id="showbtn">
+		  		<span id="showmore">Show More</span>
+		  		<span id="showless">Show Less</span>
+		  		<br>
+		  		<i class="glyphicon glyphicon-menu-down"></i>
+		  	</button>
+		  </div>
+		</div><!--End project container-->
 
 		<!-- Contact Container -->
 		<div class="container-fluid bg-2 text-center" id="contact">    
@@ -223,7 +158,10 @@
 
 		<!-- Footer -->
 		<footer class="container-fluid bg-4 text-center">
-		  <p> <a href=""></a></p> 
+		  <p>Made by Brodie Slater</p>
+		  <a href="#contact" data-toggle="popover" data-content="<p>technology icons from <a href='https://www.iconfinder.com/Jozef89'>https://www.iconfinder.com/Jozef89</a> free for commercial use</p><p>Social media icons from <a href='https://www.iconfinder.com/AlfredoCreates'>https://www.iconfinder.com/AlfredoCreates</a> licenced under Creative Commons (Attribution-Share Alike 3.0 Unported)</p><p>BrightKite icon from <a href='https://www.iconfinder.com/jerrylow'>https://www.iconfinder.com/jerrylow</a> licenced under Creative Commons (Attribution-Share Alike 3.0 Unported)</p>">
+		  	Attributions
+		  </a>
 		</footer>
 
 <!--Attribution
@@ -233,8 +171,28 @@ BrightKite icon https://www.iconfinder.com/jerrylow licenced under Creative Comm
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!--JQUERY UI-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script>
+			$(function(){
+				$('#row2').hide();
+				$('#showless').hide();
+				
+				$('#showbtn').click(function(){
+					$('#row2').slideToggle(800, function(){
+						$('#showbtn i').toggleClass("glyphicon-menu-down glyphicon-menu-up");
+						$('#showmore').toggle(0);
+						$('#showless').toggle(0);
+					});
+				});
+				$('[data-toggle="popover"]').popover({
+					html: true,
+					placement: "top"
+				}); 
+			});
+		</script>
 	</body>
 </html>
 
