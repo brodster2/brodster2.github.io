@@ -3,7 +3,6 @@
 	background-image: url(media/site_images/sprites/small_sprites.png);
     background-repeat: no-repeat;
     height: 48px;
-    margin-left: 3px;
 	margin-top: 3px;
 }
 
@@ -70,6 +69,8 @@
         background-position: 0 -276px;
     }
 }
+
+
 
 /*Show larger technology icons*/
 @media(min-width:993px) {
