@@ -1,0 +1,103 @@
+/*-- Use small icon sprites - small screens --*/
+.ico_html, .ico_css, .ico_bootstrap, .ico_js, .ico_jquery {
+	background-image: url(media/site_images/sprites/small_sprites.png);
+    background-repeat: no-repeat;
+    height: 48px;
+    margin-left: 3px;
+	margin-top: 3px;
+}
+
+.ico_bootstrap {
+    background-position: 0 0;
+}
+
+.ico_css {
+    background-position: 0 -58px;
+}
+
+.ico_html {
+	background-position: 0 -116px;
+}
+
+.ico_js {
+    background-position: 0 -174px;
+}
+
+.ico_jquery {
+    background-position: 0 -232px;
+}
+
+
+
+/*Contact section icons*/
+.ico_mail, .ico_github, .ico_linkedin {
+    background-image: url(media/site_images/sprites/sm_social.png);
+    background-repeat: no-repeat;
+    height: 64px;
+}
+
+.ico_mail {
+    background-position: 0 0;
+}
+
+.ico_github {
+    background-position: 0 -74px;
+}
+
+.ico_linkedin {
+    background-position: 0 -148px;
+}
+
+
+
+/*Show larger social icons*/
+@media(min-width:475px){
+    .ico_mail, .ico_github, .ico_linkedin {
+        background-image: url(media/site_images/sprites/social_sprite.png);
+        background-repeat: no-repeat;
+        height: 128px;
+    }
+
+    .ico_mail {
+        background-position: 0 0;
+    }
+
+    .ico_github {
+        background-position: 0 -138px;
+    }
+
+    .ico_linkedin {
+        background-position: 0 -276px;
+    }
+}
+
+/*Show larger technology icons*/
+@media(min-width:993px) {
+    .ico_html, .ico_css, .ico_bootstrap, .ico_js, .ico_jquery {
+        background-image: url(media/site_images/sprites/lg_sprites.png);
+        background-repeat: no-repeat;
+        height: 64px;
+        margin-left: 3px;
+	    margin-top: 3px;
+    }
+    
+    .ico_bootstrap {
+        background-position: 0 0;
+    }
+    
+    .ico_css {
+        background-position: 0 -74px;
+    }
+
+    .ico_html {
+        background-position: 0 -148px;
+    }
+
+    .ico_js {
+        background-position: 0 -222px;
+    }
+
+    .ico_jquery {
+        background-position: 0 -296px;
+    }
+}
