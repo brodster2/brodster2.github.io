@@ -7,10 +7,10 @@
     	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     	<link rel="shortcut icon" href="media/brand.ico" type="image/x-icon">
     	<title>Brodie Slater | Profile</title>
-		
+
     	<!-- Bootstrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
+
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -28,7 +28,7 @@
 			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 				<i class="icon-bar"></i>
 				<i class="icon-bar"></i>
-				<i class="icon-bar"></i>                        
+				<i class="icon-bar"></i>
 			  </button>
 			  <a class="navbar-brand" href="#">
 			  	<img src="media/brand.png">
@@ -126,8 +126,8 @@
 		  <!--Hide/Show button-->
 		  <div>
 		  	<button type="button" class="btn btn-lg" id="showbtn">
-		  		<span id="showmore">Show More</span>
-		  		<span id="showless">Show Less</span>
+		  		<span id="showbtntext">Show More</span>
+		  		<!-- <span id="showless">Show Less</span> -->
 		  		<br>
 		  		<i class="glyphicon glyphicon-menu-down"></i>
 		  	</button>
@@ -135,7 +135,7 @@
 		</div><!--End project container-->
 
 		<!-- Contact Container -->
-		<div class="container-fluid bg-2 text-center" id="contact">    
+		<div class="container-fluid bg-2 text-center" id="contact">
 		  <h2 class="margin">Contact Me</h2><br>
 		  <div class="row">
 			<div class="col-xs-4">
@@ -143,12 +143,12 @@
 				<img src="media/site_images/transparent.gif" class="img-responsive social ico_mail" alt="Email">
 			</a>
 			</div>
-			<div class="col-xs-4"> 
+			<div class="col-xs-4">
 			  <a href="https://www.linkedin.com/in/brodie-slater-2974a613b/" target="_blank">
 			  	<img src="media/site_images/transparent.gif" class="img-responsive social ico_linkedin" alt="LinkedIn">
 			  </a>
 			</div>
-			<div class="col-xs-4"> 
+			<div class="col-xs-4">
 			  <a href="https://github.com/brodster2" target="_blank">
 			  	<img src="media/site_images/transparent.gif" class="img-responsive social ico_github" alt="Github">
 			  </a>
@@ -166,29 +166,29 @@
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!--JQUERY UI-->
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script>
 			$(function(){
 				$('#row2').hide();
-				$('#showless').hide();
-				
+				// $('#showless').hide();
+
 				$('#showbtn').click(function(){
 					$('#row2').slideToggle(800, function(){
-						$('#showbtn i').toggleClass("glyphicon-menu-down glyphicon-menu-up");
-						$('#showmore').toggle(0);
-						$('#showless').toggle(0);
+						$('#showbtn i').toggleClass("glyphicon-menu-down glyphicon-menu-up"); //Toggles glyphicon-up/down
+            if($('#row2').is(':hidden')){ //Changes text of button depending on visibility of #row2.
+              $('#showbtntext').text('Show More');
+            }else{
+              $('#showbtntext').text('Show Less');
+            }
 					});
 				});
 				$('[data-toggle="popover"]').popover({
 					html: true,
 					placement: "top",
-				}); 
+				});
 			});
 		</script>
 	</body>
 </html>
-
-
