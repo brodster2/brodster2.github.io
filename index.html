@@ -17,7 +17,7 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="build/style.min.css">
         <link rel="stylesheet" href="sprites.css">
 	</head>
 	<body>
@@ -172,8 +172,6 @@
 		<script>
 			$(function(){
 				$('#row2').hide();
-				// $('#showless').hide();
-
 				$('#showbtn').click(function(){
 					$('#row2').slideToggle(800, function(){
 						$('#showbtn i').toggleClass("glyphicon-menu-down glyphicon-menu-up"); //Toggles glyphicon-up/down

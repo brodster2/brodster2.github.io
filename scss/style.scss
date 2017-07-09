@@ -1,0 +1,89 @@
+// Variables
+$feature-bg: #53A2BE;
+$contact-bg: #053C5C;
+$footer-bg: #2f2f2f;
+$white-bg: #ffffff;
+$font-white: #f5f6f7;
+$font-black: #555555;
+$font-stack: 20px Montserrat, sans-serif;
+
+body {
+    font: $font-stack;
+    line-height: 1.8;
+    color: $font-white;
+}
+
+p {font-size: 16px;}
+
+.margin {margin-bottom: 15px;}
+
+.padding {padding: 30px;}
+
+.bg-1 { 
+	background-color: $feature-bg; /* Light Blue */
+	color: $font-white;
+}
+
+.bg-2 { 
+	background-color: $contact-bg; /* Dark Blue */
+	color: $font-white;
+}
+
+.bg-3 { 
+	background-color: $white-bg; /* White */
+	color: $footer-bg;
+}
+
+.bg-4 { 
+	background-color: $footer-bg; /* Black Gray */
+	color: $font-white;
+}
+
+.container-fluid {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+@import 'partials/_navbar';
+
+.icon-container {
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.icon {
+	height: 45px;
+	width: 45px;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+
+.social {
+	margin: auto;
+    margin-bottom: 25px;
+}
+
+.popover {
+	color: #000;
+	overflow: scroll;
+}
+
+
+@media(min-width:993px) {
+
+.container-fluid {
+  	padding-top: 30px;
+  	padding-bottom: 30px;
+}
+
+.icon {
+  height: 65px;
+  width: 65px;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+.margin {margin-bottom: 25px;}
+.padding {padding: 50px;}
+
+}
