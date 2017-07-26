@@ -1,17 +1,11 @@
 .navbar {
-    padding-top: 15px;
+  padding-top: 15px;
 	padding-bottom: 15px;
 	border: 0;
 	border-radius: 0;
 	margin-bottom: 0;
-	font-size: 12px;
+	font-size: 15px;
 	letter-spacing: 5px;
-  
-    li {
-        a:hover {
-            color: #53A2BE !important;
-        }
-    }
 
     &-header {
         padding: 0px;
@@ -25,4 +19,24 @@
             height: 45px;
         }
     }
+}
+
+.navbar-default {
+  background-color: $bone;
+
+  .navbar-text {
+    color: $onyx;
+  }
+
+  .navbar-nav {
+    li {
+        a {
+          color: $onyx;
+        }
+
+        a:hover {
+            color: $jasper;
+        }
+    }
+  }
 }

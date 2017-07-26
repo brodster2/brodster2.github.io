@@ -1,16 +1,24 @@
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 // Variables
+$bone: #e0ddcf;
+$jasper: #d33e43;
+$onyx: #353a47;
+$black-shadow: #b8b5aa;
 $feature-bg: #53A2BE;
 $contact-bg: #053C5C;
 $footer-bg: #2f2f2f;
 $white-bg: #ffffff;
 $font-white: #f5f6f7;
 $font-black: #555555;
-$font-stack: 20px Montserrat, sans-serif;
+$font-stack: 20px 'Josefin Sans', sans-serif;
 
 body {
     font: $font-stack;
     line-height: 1.8;
-    color: $font-white;
+    background-color: $bone;
+    color: $onyx;
 }
 
 p {font-size: 16px;}
@@ -19,32 +27,17 @@ p {font-size: 16px;}
 
 .padding {padding: 30px;}
 
-.bg-1 { 
-	background-color: $feature-bg; /* Light Blue */
-	color: $font-white;
-}
-
-.bg-2 { 
-	background-color: $contact-bg; /* Dark Blue */
-	color: $font-white;
-}
-
-.bg-3 { 
-	background-color: $white-bg; /* White */
-	color: $footer-bg;
-}
-
-.bg-4 { 
-	background-color: $footer-bg; /* Black Gray */
-	color: $font-white;
-}
-
 .container-fluid {
 	padding-top: 10px;
 	padding-bottom: 20px;
+  background-color: $bone;
 }
 
 @import 'partials/_navbar';
+
+.thumbnail {
+  background-color: $black-shadow;
+}
 
 .icon-container {
 	width: 100%;
@@ -74,6 +67,10 @@ p {font-size: 16px;}
 .container-fluid {
   	padding-top: 30px;
   	padding-bottom: 30px;
+
+    h2 {
+      color: $jasper;
+    }
 }
 
 .icon {
