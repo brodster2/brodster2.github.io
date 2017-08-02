@@ -1,22 +1,22 @@
 .navbar {
+  border: 0;
+  border-radius: 0;
+  font-size: 15px;
+  letter-spacing: 5px;
+  margin-bottom: 0;
+  padding-bottom: 15px;
   padding-top: 15px;
-	padding-bottom: 15px;
-	border: 0;
-	border-radius: 0;
-	margin-bottom: 0;
-	font-size: 15px;
-	letter-spacing: 5px;
 
-    &-header {
-        padding: 0px;
-        line-height: 1;
+  &-header {
+    line-height: 1;
+    padding: 0;
     }
 
-    &-brand {
-        padding-top: 0;
+  &-brand {
+    padding-top: 0;
 
-        img {
-            height: 45px;
+    img {
+      width: 105px;
         }
     }
 }
@@ -27,16 +27,23 @@
   .navbar-text {
     color: $onyx;
   }
+}
 
-  .navbar-nav {
-    li {
-        a {
-          color: $onyx;
-        }
+.navbar-nav {
+  li {
 
-        a:hover {
-            color: $jasper;
-        }
+    margin-left: 20px;
+
+    a {
+      color: $onyx;
+
+      img {
+        height: 50px;
+      }
+    }
+
+    a:hover {
+      color: $jasper;
     }
   }
 }

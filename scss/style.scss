@@ -53,6 +53,16 @@ p {font-size: 16px;}
   width: 45px;
 }
 
+#showbtn {
+  border-bottom: 5px solid $jasper;
+  box-shadow: 4px 4px 3px $black-shadow;
+
+  &:active {
+    box-shadow: 4px 0 3px $black-shadow;
+    transform: translate(0, 4px);
+  }
+}
+
 .social {
   margin: auto;
   margin-bottom: 25px;
