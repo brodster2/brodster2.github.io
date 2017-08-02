@@ -15,10 +15,10 @@ $font-black: #555555;
 $font-stack: 20px 'Josefin Sans', sans-serif;
 
 body {
-    font: $font-stack;
-    line-height: 1.8;
-    background-color: $bone;
-    color: $onyx;
+  background-color: $bone;
+  color: $onyx;
+  font: $font-stack;
+  line-height: 1.8;
 }
 
 p {font-size: 16px;}
@@ -28,59 +28,61 @@ p {font-size: 16px;}
 .padding {padding: 30px;}
 
 .container-fluid {
-	padding-top: 10px;
-	padding-bottom: 20px;
   background-color: $bone;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 @import 'partials/_navbar';
 
 .thumbnail {
-  background-color: $black-shadow;
+  background-color: transparent;
+  border: 2px solid $black-shadow;
+  box-shadow: 5px 5px 3px $black-shadow;
 }
 
 .icon-container {
-	width: 100%;
-	padding-bottom: 10px;
+  padding-bottom: 10px;
+  width: 100%;
 }
 
 .icon {
-	height: 45px;
-	width: 45px;
-	margin-left: 3px;
-	margin-top: 3px;
+  height: 45px;
+  margin-left: 3px;
+  margin-top: 3px;
+  width: 45px;
 }
 
 .social {
-	margin: auto;
-    margin-bottom: 25px;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
 .popover {
-	color: #000;
-	overflow: scroll;
+  color: #000;
+  overflow: scroll;
 }
 
 
 @media(min-width:993px) {
 
-.container-fluid {
-  	padding-top: 30px;
-  	padding-bottom: 30px;
+  .container-fluid {
+    padding-bottom: 30px;
+    padding-top: 30px;
 
     h2 {
       color: $jasper;
     }
 }
 
-.icon {
-  height: 65px;
-  width: 65px;
-  margin-left: 3px;
-  margin-top: 3px;
+  .icon {
+    height: 65px;
+    margin-left: 3px;
+    margin-top: 3px;
+    width: 65px;
 }
 
-.margin {margin-bottom: 25px;}
-.padding {padding: 50px;}
+  .margin {margin-bottom: 25px;}
+  .padding {padding: 50px;}
 
 }
